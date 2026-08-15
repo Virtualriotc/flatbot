@@ -1,0 +1,13 @@
+{
+  "name": "flatbot", "version": "0.1.0", "type": "module", "license": "MIT",
+  "description": "Triage German rental listings from a local Fredy database with an LLM judge, draft the application letter, and — only in auto mode — submit the portal's own contact form.",
+  "keywords": ["rental", "apartment-hunting", "germany", "telegram-bot", "llm", "fredy", "immobilienscout24", "kleinanzeigen", "wg-gesucht", "immowelt", "automation"],
+  "author": "flatbot contributors",
+  "repository": { "type": "git", "url": "git+https://github.com/Virtualriotc/flatbot.git" },
+  "engines": { "node": ">=22" },
+  "files": ["dist/", "config.example.yaml", "docs/", "scripts/", "README.md", "LICENSE"],
+  "bin": { "flatbot": "./dist/index.js" },
+  "scripts": { "build": "tsc", "dev": "tsx src/index.ts", "test": "vitest run" },
+  "dependencies": { "better-sqlite3": "^11", "grammy": "^1", "patchright": "^1.61.1", "yaml": "^2" },
+  "devDependencies": { "@types/better-sqlite3": "^7", "@types/node": "^22", "tsx": "^4", "typescript": "^5", "vitest": "^3" }
+}

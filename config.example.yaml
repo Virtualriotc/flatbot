@@ -1,0 +1,25 @@
+hard:
+  maxWarmRent: 1000
+  minSqm: 30
+  minRooms: 1
+  maxRooms: 2
+  city: Berlin
+  districtBlocklist: []
+  stalenessCutoffHours: 24
+thresholds: { apply: 75, ask: 50 }
+preferences: >
+  Living alone. Ideal: 2 rooms between city center and my office. Kitchen required.
+  Balcony and nearby gym are nice-to-haves, not requirements.
+profile: >
+  Employed full-time, stable income, non-smoker, no pets. Documents ready on request.
+platforms: [immoscout, kleinanzeigen, wggesucht, immowelt]
+llm: { provider: claude-cli }
+fredyDbPath: ../fredy/db/listings.db   # ../fredy assumes a sibling checkout (operator's choice, unverified); the db/listings.db suffix IS verified in Task 2 (Fredy SHA 6a1fbc7a5215e2588b4b1184e06d6562acee41fe) as the real path within any Fredy checkout
+dbPath: ./flatbot.sqlite
+sender:                        # only used in auto mode (/auto in Telegram); shadow ignores it
+  backend: claude-agent        # claude-agent (Claude subscription) or browser-use (free Gemini key)
+  hourlyCapPerPlatform: 3      # applications per portal per hour
+  minDelayMinutes: 2           # random wait before each send, keeps the pace human
+  maxDelayMinutes: 8
+  profileDir: ./browser-profile  # your logged-in portal sessions (gitignored, see `flatbot login`)
+  screenshotDir: ./screenshots   # one confirmation shot per send — the audit trail (gitignored)

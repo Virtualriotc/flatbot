@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+config.yaml
+# WAL is on, so the -wal/-shm sidecars hold live listing rows, feedback and letters too
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+# distilled from your own feedback — personal, and it lands next to dbPath (repo root by default)
+learned.md
+browser-profile/
+screenshots/
+fredy/
+*.log
+.superpowers/
+docs/superpowers/
