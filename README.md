@@ -78,11 +78,6 @@ sender only — the alternative restricts nothing at all, and that warning sits 
 The browser profile directory holds live portal sessions: anyone who has it is logged in as you. It is
 gitignored — do not copy it anywhere, and delete it when you stop.
 
-## Status
-
-flatbot has never sent a real application. Not one. The per-portal form knowledge in `src/platforms.ts`
-— which button opens the form, the German wording of the success confirmation — has never been checked
-against a live page. Windows is implemented, never run on real Windows. Watch your first sends yourself.
 
 ## Disclaimer
 
