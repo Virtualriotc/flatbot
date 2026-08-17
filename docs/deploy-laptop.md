@@ -5,7 +5,9 @@ Everything here runs on one machine: Fredy in one process, flatbot in another. U
 home ones. An old laptop with the lid-close sleep disabled, a Pi, or a home server all work.
 
 Read [../README.md](../README.md) first. This document is the operator's runbook: the exact order,
-plus the parts that only matter once you send for real.
+plus the parts that only matter once you send for real. Every `config.yaml` key, the full Telegram and
+CLI surface, the backend comparison and the troubleshooting list live in
+[configuration.md](configuration.md).
 
 ---
 
